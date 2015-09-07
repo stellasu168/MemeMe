@@ -29,8 +29,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     ]
 
     override func viewDidLoad() {
-        super.viewDidLoad()
         
+        super.viewDidLoad()
         // Setup the top text input
         setupTextField(topTextField, text: "TOP", delegate: self, attributes: memeTextAttributes, alignment: NSTextAlignment.Center)
         setupTextField(bottomTextField, text: "BOTTOM", delegate: self, attributes: memeTextAttributes, alignment: NSTextAlignment.Center)
@@ -41,7 +41,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         super.viewWillAppear(animated)
         // Subscribe to keyboard notifications to allow the view to raise when necessary
-        self.subscribeToKeyboardNotifications()
+        subscribeToKeyboardNotifications()
         
         // Disable the camera button if the device doesn't have a camera
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
@@ -51,7 +51,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // Unsubscribe
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        self.unsubscribeFromKeyboardNotifications()
+        unsubscribeFromKeyboardNotifications()
     }
     
     
@@ -69,7 +69,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // NSNotification is announcing the keyboard is showing or disappearing
     func keyboardWillShow(notification: NSNotification) {
         if bottomTextField.isFirstResponder() {
-            self.view.frame.origin.y -= getKeyboardHeight(notification)
+            view.frame.origin.y -= getKeyboardHeight(notification)
         }
     }
     
@@ -119,12 +119,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
             //imagePickView.contentMode = UIViewContentMode.ScaleAspectFit
             imagePickView.image = image
         } else {
             println("No image was picked")
         }
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
         
     }
 
@@ -145,7 +146,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
-        self.view.drawViewHierarchyInRect(self.view.frame,
+        view.drawViewHierarchyInRect(self.view.frame,
             afterScreenUpdates: true)
         let memedImage : UIImage =
         UIGraphicsGetImageFromCurrentImageContext()
@@ -177,6 +178,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 
                 // Dismiss the Activity View
                 self.dismissViewControllerAnimated(true, completion: nil)
+                
             }
         }
         presentViewController(activityViewController, animated: true, completion: nil)
@@ -194,9 +196,5 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     
-
-
-
-
 }
 
