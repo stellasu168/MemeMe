@@ -189,8 +189,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         // Create the meme
         let memeImage = generateMemedImage()
-        
-        // Create a Meme object to store the memed image
         var meme = Meme(topText: topTextField.text, bottomText: bottomTextField.text, imageView: imagePickView, memedImage: memeImage)
         
     }
