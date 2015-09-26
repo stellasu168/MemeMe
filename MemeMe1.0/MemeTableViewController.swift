@@ -15,6 +15,12 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        // Jump to addNewMeme if the array is nil
+        if memes == nil {
+            performSegueWithIdentifier("isEmpty", sender: nil)
+        }
+
 
     }
     
@@ -31,13 +37,14 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
     override func viewDidAppear(animated: Bool) {
         
         super.viewDidAppear(animated)
-        
-        // Jump to addNewMeme if the array is nil
-        if memes == nil {
-            performSegueWithIdentifier("isEmpty", sender: nil)
-        }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "isEmpty") {
+            let editorVC = segue.destinationViewController as! ViewController
+        }
+    }
+
 
     // MARK: - Meme table view data source
 
