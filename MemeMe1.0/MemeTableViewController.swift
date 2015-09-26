@@ -21,7 +21,6 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
             performSegueWithIdentifier("isEmpty", sender: nil)
         }
 
-
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -44,9 +43,6 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
             let editorVC = segue.destinationViewController as! ViewController
         }
     }
-
-
-    // MARK: - Meme table view data source
 
     // Return the number of rows in the array.
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

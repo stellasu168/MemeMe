@@ -29,8 +29,6 @@ class SentMemesCollectionView: UICollectionViewController, UICollectionViewDataS
         collectionView!.reloadData()
     }
 
-    // MARK: UICollectionViewDataSource
-
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return memes.count
     }
@@ -53,7 +51,6 @@ class SentMemesCollectionView: UICollectionViewController, UICollectionViewDataS
         navigationController!.pushViewController(detailController, animated: true)
         
     }
-
     
     @IBAction func addNewMeme(sender: AnyObject) {
         performSegueWithIdentifier("addMemeFromCollection", sender: nil)
