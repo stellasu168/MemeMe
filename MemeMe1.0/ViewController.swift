@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
@@ -184,15 +185,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         presentViewController(activityViewController, animated: true, completion: nil)
     }
     
-    // Saves the memedImage
+    // Create a meme object and add it to the memes array
     func save() {
         
         // Create the meme
         let memeImage = generateMemedImage()
         var meme = Meme(topText: topTextField.text, bottomText: bottomTextField.text, imageView: imagePickView, memedImage: memeImage)
         
+        // Add to the memes array on the Application Delegate.
+        let object = UIApplication.sharedApplication().delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
     }
 
     
+    @IBAction func cancelAction(sender: AnyObject) {
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
 }
+
+
+    
+
 
