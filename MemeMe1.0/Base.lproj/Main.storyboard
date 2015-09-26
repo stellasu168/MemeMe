@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ucM-bj-UOh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -145,10 +146,10 @@
             </objects>
             <point key="canvasLocation" x="-18" y="-600"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Vew Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Edit Vew Controller" id="vXZ-lx-hvc" customClass="ViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VsV-ph-jno"/>
                         <viewControllerLayoutGuide type="bottom" id="959-5X-f1D"/>
@@ -254,6 +255,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="706" y="-600"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="vzy-Aq-gV7">
+            <objects>
+                <viewController storyboardIdentifier="MemeDetailViewController" title="Detail View Controller" id="0DL-E4-xkL" customClass="MemeDetailViewController" customModule="MemeMe1_0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VQW-78-w8R"/>
+                        <viewControllerLayoutGuide type="bottom" id="DMU-nq-hcd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VBu-Q7-BqO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mRj-cX-vQo">
+                                <rect key="frame" x="56" y="65" width="488" height="446"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="mRj-cX-vQo" secondAttribute="trailing" constant="40" id="5ix-bm-dTw"/>
+                            <constraint firstItem="DMU-nq-hcd" firstAttribute="top" secondItem="mRj-cX-vQo" secondAttribute="bottom" constant="45" id="CBA-ia-rv5"/>
+                            <constraint firstItem="mRj-cX-vQo" firstAttribute="leading" secondItem="VBu-Q7-BqO" secondAttribute="leadingMargin" constant="40" id="Nsu-eu-XxA"/>
+                            <constraint firstItem="mRj-cX-vQo" firstAttribute="top" secondItem="VQW-78-w8R" secondAttribute="bottom" constant="45" id="rb1-aV-SAL"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="memeImage" destination="mRj-cX-vQo" id="4XG-Rc-IT8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mcf-84-3LE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1549" y="-812"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

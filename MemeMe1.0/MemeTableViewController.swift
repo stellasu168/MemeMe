@@ -29,16 +29,15 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
     }
     
     override func viewDidAppear(animated: Bool) {
+        
         super.viewDidAppear(animated)
         
         // Jump to addNewMeme if the array is nil
         if memes == nil {
             performSegueWithIdentifier("isEmpty", sender: nil)
-            print("memes array is nil")
         }
     }
     
-
 
     // MARK: - Meme table view data source
 
@@ -61,7 +60,16 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
         return cell
         
     }
+    
+    // Setting up the detail Meme view
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        let detailController = storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
+        detailController.meme = memes[indexPath.row]
+        navigationController!.pushViewController(detailController, animated: true)
+    }
+
+    
     @IBAction func addNewMeme(sender: AnyObject) {
         performSegueWithIdentifier("isEmpty", sender: nil)
     }
