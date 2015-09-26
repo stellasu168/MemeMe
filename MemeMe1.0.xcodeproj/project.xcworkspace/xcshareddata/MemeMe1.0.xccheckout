@@ -5,7 +5,11 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
 	<string>D8877C78-0F98-4C0A-9526-1143A59D06A5</string>
+=======
+	<string>9182298A-CA4B-43FC-A1F3-8274156144E5</string>
+>>>>>>> master
 	<key>IDESourceControlProjectName</key>
 	<string>MemeMe1.0</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
