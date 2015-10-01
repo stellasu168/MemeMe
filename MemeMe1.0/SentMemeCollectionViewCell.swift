@@ -10,7 +10,7 @@ import UIKit
 
 let reuseIdentifier = "MemeCollectionViewCell"
 
-class SentMemesCollectionView: UICollectionViewController, UICollectionViewDataSource {
+class SentMemesCollectionView: UICollectionViewController {
     
     var memes: [Meme]!
     

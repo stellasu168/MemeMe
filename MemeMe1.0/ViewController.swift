@@ -117,14 +117,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     // Passes the image selected by the user to the imagePickView
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             
             //imagePickView.contentMode = UIViewContentMode.ScaleAspectFit
             imagePickView.image = image
         } else {
-            println("No image was picked")
+            print("No image was picked")
         }
         dismissViewControllerAnimated(true, completion: nil)
         
@@ -190,7 +190,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         // Create the meme
         let memeImage = generateMemedImage()
-        var meme = Meme(topText: topTextField.text, bottomText: bottomTextField.text, imageView: imagePickView, memedImage: memeImage)
+        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, imageView: imagePickView, memedImage: memeImage)
         
         // Add to the memes array on the Application Delegate.
         let object = UIApplication.sharedApplication().delegate
