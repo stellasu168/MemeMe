@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ucM-bj-UOh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -23,7 +23,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4B6-Re-Kuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-709" y="-1326"/>
+            <point key="canvasLocation" x="-1001" y="-1422"/>
         </scene>
         <!--Collection View-->
         <scene sceneID="fEB-4y-iyP">
@@ -40,7 +40,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0j5-6C-CZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-709" y="-600"/>
+            <point key="canvasLocation" x="-1001" y="-608"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="dui-Yh-1dd">
@@ -78,7 +78,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mjg-Tg-1dA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="769" y="-1312"/>
+            <point key="canvasLocation" x="521" y="-1396"/>
         </scene>
         <!--Table View-->
         <scene sceneID="AEP-pp-x9J">
@@ -95,7 +95,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiM-LN-Q8b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-18" y="-1326"/>
+            <point key="canvasLocation" x="-234" y="-1410"/>
         </scene>
         <!--Sent Memes Collection View-->
         <scene sceneID="1UR-lG-Z6i">
@@ -147,7 +147,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xAD-sV-CXT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-18" y="-600"/>
+            <point key="canvasLocation" x="-222" y="-608"/>
         </scene>
         <!--Edit Vew Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -257,12 +257,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="706" y="-600"/>
+            <point key="canvasLocation" x="1124" y="-584"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Meme Detail View Controller-->
         <scene sceneID="vzy-Aq-gV7">
             <objects>
-                <viewController storyboardIdentifier="MemeDetailViewController" title="Detail View Controller" id="0DL-E4-xkL" customClass="MemeDetailViewController" customModule="MemeMe1_0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeDetailViewController" id="0DL-E4-xkL" customClass="MemeDetailViewController" customModule="MemeMe1_0" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VQW-78-w8R"/>
                         <viewControllerLayoutGuide type="bottom" id="DMU-nq-hcd"/>
@@ -291,10 +291,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mcf-84-3LE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1549" y="-812"/>
+            <point key="canvasLocation" x="1281" y="-1384"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5OP-WT-l2X"/>
+        <segue reference="tJ4-Ug-nQ8"/>
     </inferredMetricsTieBreakers>
 </document>

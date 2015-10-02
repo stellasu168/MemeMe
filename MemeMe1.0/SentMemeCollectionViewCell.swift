@@ -15,10 +15,7 @@ class SentMemesCollectionView: UICollectionViewController {
     var memes: [Meme]!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        
     }
         
     override func viewWillAppear(animated: Bool) {

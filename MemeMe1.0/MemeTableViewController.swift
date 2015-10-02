@@ -38,11 +38,6 @@ class MemeTableViewController: UITableViewController {
         super.viewDidAppear(animated)
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "isEmpty") {
-            let editorVC = segue.destinationViewController as! ViewController
-        }
-    }
 
     // Return the number of rows in the array.
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
