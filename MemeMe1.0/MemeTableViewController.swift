@@ -17,10 +17,10 @@ class MemeTableViewController: UITableViewController {
         super.viewDidLoad()
         
         // Jump to addNewMeme if the array is nil
-        if memes == nil {
+        /*if memes == nil {
             performSegueWithIdentifier("isEmpty", sender: nil)
         }
-
+        */
     }
     
     override func viewWillAppear(animated: Bool) {
