@@ -18,6 +18,9 @@ class MemeDetailViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        // Hide the tab bar to have extra space
+        tabBarController?.tabBar.hidden = true
+        
         // Display the memed Image
         memeImage.image = meme.memedImage
         

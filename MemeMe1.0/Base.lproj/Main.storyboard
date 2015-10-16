@@ -65,7 +65,7 @@
                             <outlet property="delegate" destination="L4h-uq-UW4" id="Cd2-H6-VpF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Table View Controller" id="g2A-aI-n2C">
+                    <navigationItem key="navigationItem" title="Sent Memes" id="g2A-aI-n2C">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="AuH-ma-Wv8">
                             <connections>
                                 <action selector="addNewMeme:" destination="L4h-uq-UW4" id="ak7-Je-xQ6"/>
@@ -295,6 +295,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5OP-WT-l2X"/>
+        <segue reference="tJ4-Ug-nQ8"/>
     </inferredMetricsTieBreakers>
 </document>
